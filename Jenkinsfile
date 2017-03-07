@@ -15,7 +15,7 @@ stage('test') {
 
 stage('deploy') {
     node {
-        echo env.BRANCH_NAME
+        echo env
         if (env.BRANCH_NAME == 'master') {
             try {
                 input message: 'Deploy this build?', ok: 'Publish' 
